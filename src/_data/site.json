@@ -2,7 +2,7 @@
   "name": "Pericles Loucopoulos",
   "tagline": "Photographs",
   "statement": "[One or two sentences on what you photograph and why — the voice of the site.]",
-  "email": "",
+  "email": "periloucopoulos@me.com",
   "hero": {
     "image": "/images/travels-in-india/umbrella.jpg",
     "alt": "Seen through a taxi window, a man in white robes crosses the street under an umbrella",
@@ -10,8 +10,18 @@
     "gallery": "travels-in-india"
   },
   "social": [
-    { "name": "Instagram", "url": "https://www.instagram.com/periloucopoulos/" },
-    { "name": "LinkedIn", "url": "https://www.linkedin.com/in/pericles-loucopoulos-8a4b0b5/" },
-    { "name": "Facebook", "url": "https://www.facebook.com/pericles.loucopoulos.9" }
-  ]
+    {
+      "name": "Instagram",
+      "url": "https://www.instagram.com/periloucopoulos/"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/pericles-loucopoulos-8a4b0b5/"
+    },
+    {
+      "name": "Facebook",
+      "url": "https://www.facebook.com/pericles.loucopoulos.9"
+    }
+  ],
+  "portrait": "/images/portrait.jpg"
 }

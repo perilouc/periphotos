@@ -5,7 +5,7 @@ section: about
 permalink: /about/
 ---
 <section class="wrap about">
-  <div class="ph portrait" aria-hidden="true"></div>
+  {% if site.portrait %}<img class="portrait" src="{{ site.portrait }}" alt="Portrait of {{ site.name }}">{% else %}<div class="ph portrait" aria-hidden="true"></div>{% endif %}
   <div class="about-text">
     <h1>About</h1>
     <p class="lead">[A short introduction in your own voice — how you came to photography and what you look for.]</p>

@@ -93,7 +93,9 @@ h1 { margin: 0; font-family: var(--display); font-weight: 500; letter-spacing: -
 
 /* About */
 .about { padding-top: 96px; display: flex; flex-wrap: wrap; gap: 64px 96px; align-items: flex-start; }
-.portrait { flex: 1 1 320px; max-width: 480px; aspect-ratio: 4 / 5; }
+.portrait { flex: 1 1 320px; max-width: 420px; }
+div.portrait { aspect-ratio: 4 / 5; }
+img.portrait { width: 100%; height: auto; }
 .about-text { flex: 999 1 480px; min-width: 0; max-width: 680px; font-size: 19px; line-height: 1.7; }
 .about-text h1 { font-size: clamp(36px, 4vw, 56px); margin-bottom: 28px; }
 .about-text .lead { font-size: 23px; line-height: 1.55; }
