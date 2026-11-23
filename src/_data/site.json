@@ -4,10 +4,11 @@
   "statement": "[One or two sentences on what you photograph and why — the voice of the site.]",
   "email": "periloucopoulos@me.com",
   "hero": {
-    "image": "/images/travels-in-india/umbrella.jpg",
-    "alt": "Seen through a taxi window, a man in white robes crosses the street under an umbrella",
+    "image": "/images/travels-in-india/temple-steps.jpg",
+    "alt": "An old man wrapped in a shawl reads on carved temple steps while a woman in a white sari walks past",
     "caption": "",
-    "gallery": "travels-in-india"
+    "gallery": "travels-in-india",
+    "focus": "center 40%"
   },
   "social": [
     {

@@ -39,8 +39,10 @@ h1 { margin: 0; font-family: var(--display); font-weight: 500; letter-spacing: -
 .site-footer nav { display: flex; gap: 24px; }
 
 /* Home */
-.hero { padding-top: 24px; }
-.hero img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+/* Cover photograph: fills the screen below the header, edge to edge */
+.hero { padding-top: 8px; }
+.hero img { width: 100%; height: calc(100vh - 150px); height: calc(100svh - 150px); min-height: 420px; max-height: 1100px; object-fit: cover; }
+@media (max-width: 640px) { .hero img { height: auto; min-height: 0; aspect-ratio: 4 / 5; } }
 .hero-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 40px; padding-top: 16px; font-size: 13px; color: var(--muted); }
 .hero-meta a { color: var(--fg); }
 .statement { padding-top: 120px; }

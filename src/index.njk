@@ -3,9 +3,9 @@ layout: base.njk
 ---
 {%- set heroGallery = null -%}
 {%- for g in collections.galleries %}{% if g.fileSlug == site.hero.gallery %}{% set heroGallery = g %}{% endif %}{% endfor -%}
-<section class="wrap hero">
-  <img src="{{ site.hero.image }}" alt="{{ site.hero.alt }}" fetchpriority="high">
-  <div class="hero-meta">
+<section class="hero" aria-label="Featured photograph">
+  <img src="{{ site.hero.image }}" alt="{{ site.hero.alt }}" fetchpriority="high"{% if site.hero.focus %} style="object-position: {{ site.hero.focus }}"{% endif %}>
+  <div class="wrap hero-meta">
     <span>{{ site.hero.caption }}</span>
     {% if heroGallery %}<span>from <a href="{{ heroGallery.url }}">{{ heroGallery.data.title }}</a></span>{% endif %}
   </div>
