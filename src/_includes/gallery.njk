@@ -1,0 +1,39 @@
+---
+layout: base.njk
+section: work
+---
+{%- set all = collections.galleries -%}
+{%- set pos = 0 -%}
+{%- for g in all %}{% if g.url == page.url %}{% set pos = loop.index0 %}{% endif %}{% endfor -%}
+{%- set nextG = all[pos + 1] if pos + 1 < all.length else all[0] -%}
+
+<section class="wrap intro">
+  <div class="intro-title">
+    <span class="eyebrow">Project {{ (pos + 1) | pad2 }} of {{ all.length | pad2 }}</span>
+    <h1>{{ title }}</h1>
+  </div>
+  <div class="intro-text">
+    {% if intro %}<p class="lead">{{ intro }}</p>{% endif %}
+    {% if meta or photos.length %}<p class="meta">{% if meta %}{{ meta }}{% if photos.length %} · {% endif %}{% endif %}{% if photos.length %}{{ photos.length }} photographs{% endif %}</p>{% endif %}
+  </div>
+</section>
+
+{% if photos and photos.length %}
+<section class="wrap sequence" data-gallery>
+  {% for row in photos | photoRows %}
+    <div class="row row-{{ row.type }}">
+      {% for p in row.photos %}{% include "photo.njk" %}{% endfor %}
+    </div>
+  {% endfor %}
+</section>
+{% else %}
+<section class="wrap empty"><p>Photographs coming soon.</p></section>
+{% endif %}
+
+<nav class="wrap next-nav" aria-label="Projects">
+  <a class="small-caps muted" href="/#work">All projects</a>
+  <a class="next" href="{{ nextG.url }}">
+    <span class="muted">Next project</span>
+    <span class="next-title">{{ nextG.data.title }}</span>
+  </a>
+</nav>

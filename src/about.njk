@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: About
+section: about
+permalink: /about/
+---
+<section class="wrap about">
+  <div class="ph portrait" aria-hidden="true"></div>
+  <div class="about-text">
+    <h1>About</h1>
+    <p class="lead">[A short introduction in your own voice — how you came to photography and what you look for.]</p>
+    <p>[A second paragraph — the places and themes you return to, current projects.]</p>
+  </div>
+</section>
+
+<section class="wrap block contact" id="contact">
+  <div class="block-head"><h2>Contact</h2></div>
+  <div class="contact-grid">
+    <p class="contact-line">Just write to me.</p>
+    <div class="contact-links">
+      {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% else %}<span class="muted">[Email address to come]</span>{% endif %}
+      {% for s in site.social %}<a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}
+    </div>
+  </div>
+</section>

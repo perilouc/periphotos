@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if title %}{{ title }} — {% endif %}{{ site.name }} · {{ site.tagline }}</title>
+<meta name="description" content="{{ description or (site.name + ' — photographs') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap site-header">
+  <a class="brand" href="/">
+    <span class="brand-name">{{ site.name }}</span>
+    <span class="brand-tag">{{ site.tagline }}</span>
+  </a>
+  <nav aria-label="Main" class="main-nav">
+    <a href="/#work"{% if section == "work" %} aria-current="page"{% endif %}>Work</a>
+    <a href="/journal/"{% if section == "journal" %} aria-current="page"{% endif %}>Journal</a>
+    <a href="/about/"{% if section == "about" %} aria-current="page"{% endif %}>About</a>
+    <a href="/about/#contact">Contact</a>
+  </nav>
+</header>
+<main id="main">
+{{ content | safe }}
+</main>
+<footer class="wrap site-footer">
+  <span>© {{ site.name }}</span>
+  <nav aria-label="Social">
+    {% for s in site.social %}<a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}
+  </nav>
+</footer>
+<script src="/assets/js/lightbox.js" defer></script>
+</body>
+</html>

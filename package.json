@@ -1,0 +1,16 @@
+{
+  "name": "periphotos",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.8"
+  },
+  "private": true,
+  "type": "module"
+}

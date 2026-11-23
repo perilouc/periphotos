@@ -1,0 +1,6 @@
+<figure class="photo">
+  <button type="button" class="zoom" data-index="{{ p.index }}" aria-label="View full screen{% if p.alt %}: {{ p.alt }}{% endif %}">
+    <img src="{{ p.image }}" alt="{{ p.alt }}" loading="{{ 'eager' if p.index == 0 else 'lazy' }}" decoding="async">
+  </button>
+  {% if p.caption %}<figcaption>{{ p.caption }}</figcaption>{% endif %}
+</figure>

@@ -1,0 +1,44 @@
+---
+layout: base.njk
+---
+{%- set heroGallery = null -%}
+{%- for g in collections.galleries %}{% if g.fileSlug == site.hero.gallery %}{% set heroGallery = g %}{% endif %}{% endfor -%}
+<section class="wrap hero">
+  <img src="{{ site.hero.image }}" alt="{{ site.hero.alt }}" fetchpriority="high">
+  <div class="hero-meta">
+    <span>{{ site.hero.caption }}</span>
+    {% if heroGallery %}<span>from <a href="{{ heroGallery.url }}">{{ heroGallery.data.title }}</a></span>{% endif %}
+  </div>
+</section>
+
+<section class="wrap statement">
+  <p>{{ site.statement }}</p>
+</section>
+
+<section class="wrap block" id="work">
+  <div class="block-head">
+    <h2>Work</h2>
+    <span class="muted">{{ collections.galleries.length }} projects</span>
+  </div>
+  <div class="tiles">
+    {% for g in collections.galleries %}
+    <a class="tile" href="{{ g.url }}">
+      {% if g.data.cover %}<img src="{{ g.data.cover }}" alt="" loading="lazy">{% else %}<div class="ph" aria-hidden="true"></div>{% endif %}
+      <span class="tile-meta"><span class="tile-title">{{ g.data.title }}</span><span class="muted">{{ loop.index | pad2 }}</span></span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="wrap block">
+  <div class="block-head">
+    <h2>Journal</h2>
+    <a class="muted" href="/journal/">All entries</a>
+  </div>
+  {% for post in collections.journal | head(3) %}
+  <a class="entry" href="{{ post.url }}">
+    <span class="muted">{{ post.date | monthYear }}{% if post.data.place %} · {{ post.data.place }}{% endif %}</span>
+    <span class="entry-title">{{ post.data.title }}</span>
+  </a>
+  {% endfor %}
+</section>

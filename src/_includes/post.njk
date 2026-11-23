@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<article>
+  <header class="narrow post-head">
+    {% if series %}<span class="eyebrow">{{ series }}{% if part %} · {{ part }}{% endif %}</span>{% endif %}
+    <h1>{{ title }}</h1>
+    <span class="muted">{{ page.date | longDate }}</span>
+  </header>
+  {% if photos and photos.length %}
+  <section class="wrap sequence post-photos" data-gallery>
+    {% for row in photos | photoRows %}
+      <div class="row row-{{ row.type }}">
+        {% for p in row.photos %}{% include "photo.njk" %}{% endfor %}
+      </div>
+    {% endfor %}
+  </section>
+  {% endif %}
+  <div class="narrow prose">
+    {{ content | safe }}
+  </div>
+</article>
+
+{% if series %}
+<nav class="narrow series" aria-label="This series">
+  <h2>{{ series }}</h2>
+  {% for post in collections.journal | reverse %}{% if post.data.series == series %}
+  <a href="{{ post.url }}"{% if post.url == page.url %} aria-current="page"{% endif %}>
+    <span>{{ post.data.title }}</span><span class="muted">{{ post.data.part }}</span>
+  </a>
+  {% endif %}{% endfor %}
+</nav>
+{% endif %}
