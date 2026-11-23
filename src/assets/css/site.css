@@ -69,8 +69,10 @@ h1 { margin: 0; font-family: var(--display); font-weight: 500; letter-spacing: -
 .sequence { padding-top: 96px; display: flex; flex-direction: column; gap: clamp(48px, 7vw, 96px); }
 .row-pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 32px; align-items: start; }
 .row-centred .photo { width: min(100%, 980px); margin: 0 auto; }
+.row-narrow .photo { width: min(100%, 620px); margin: 0 auto; }
 .photo { margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .photo figcaption { font-size: 13px; color: var(--muted); }
+.photo img { width: 100%; }
 .zoom { border: 0; padding: 0; background: none; cursor: zoom-in; display: block; width: 100%; }
 .empty { padding-top: 96px; color: var(--muted); }
 .next-nav { padding-top: 140px; }

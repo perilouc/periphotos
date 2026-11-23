@@ -22,13 +22,13 @@ photos:
   - image: /images/travels-in-india/boatman.jpg
     alt: A short plain description (read aloud by screen readers)
     caption: Varanasi, 2012        # shown under the photo; leave "" for none
-    layout: full                   # full | pair | centred
+    layout: full                   # full | pair | centred | narrow
 ```
 
 - **Add a photo:** put the file in `src/images/<gallery>/` and add an entry to the list.
 - **Delete a photo:** remove its entry (and the file, if no longer needed).
 - **Reorder:** move entries up or down.
-- **Layout:** two consecutive `pair` photos sit side by side; `full` spans the page; `centred` is narrower with space around it.
+- **Layout:** two consecutive `pair` photos sit side by side; `full` spans the page; `centred` is narrower with space around it; `narrow` suits a single upright photo.
 - **Order of galleries** on the home page: the `order:` number in each file. **Cover:** the `cover:` image.
 
 ## Moving to periphotos.com

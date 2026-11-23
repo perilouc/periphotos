@@ -5,7 +5,7 @@ intro: "[Two or three sentences introducing the project — where, when, and wha
 meta: ""
 cover: /images/travels-in-india/boatman.jpg
 # Each photo: image, alt (a plain description for screen readers), caption (shown under the photo),
-# layout: full (full width) | pair (two consecutive "pair" photos sit side by side) | centred
+# layout: full (full width) | pair (two consecutive "pair" photos sit side by side) | centred | narrow (a single upright photo)
 photos:
   - image: /images/travels-in-india/boatman.jpg
     alt: A boatman in a white turban rows towards the camera, river steps and other boats fading into mist behind him
@@ -35,4 +35,32 @@ photos:
     alt: A man sleeps on a wooden cart against a stone wall while one boy rests on him and another looks at the camera
     caption: ""
     layout: pair
+  - image: /images/travels-in-india/ghats-from-river.jpg
+    alt: The riverfront seen from the water in morning haze, rowing boats in front of crowded steps and old buildings
+    caption: ""
+    layout: full
+  - image: /images/travels-in-india/elder-on-ghat.jpg
+    alt: A white-bearded elder in a shawl sits on a platform by the river while a man before him bows his head
+    caption: ""
+    layout: pair
+  - image: /images/travels-in-india/washing-at-ghat.jpg
+    alt: A man in a white turban crouches at the water's edge to wash, a boat and figures under an umbrella behind him
+    caption: ""
+    layout: pair
+  - image: /images/travels-in-india/reading-in-mosque.jpg
+    alt: A figure in silhouette sits reading a book on a stand, a shaft of sunlight across an inlaid marble floor
+    caption: ""
+    layout: centred
+  - image: /images/travels-in-india/karnatak-state-ghat.jpg
+    alt: A group of people in shawls gathers on wide steps below a large white building marked Karnatak State Ghat
+    caption: ""
+    layout: full
+  - image: /images/travels-in-india/street-tailor.jpg
+    alt: An old tailor works at a sewing machine under an umbrella on the pavement as a cow passes and a young man crouches nearby
+    caption: ""
+    layout: full
+  - image: /images/travels-in-india/girl-with-pots.jpg
+    alt: A girl sits by a stall of small clay pots and stacked leaf plates, looking at the camera, a busy street behind her
+    caption: ""
+    layout: narrow
 ---
