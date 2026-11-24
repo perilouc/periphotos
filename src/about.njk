@@ -19,7 +19,7 @@ permalink: /about/
     <p class="contact-line">Just write to me.</p>
     <div class="contact-links">
       {% if site.email %}<a href="mailto:{{ site.email }}">{{ site.email }}</a>{% else %}<span class="muted">[Email address to come]</span>{% endif %}
-      {% for s in site.social %}<a href="{{ s.url }}">{{ s.name }}</a>{% endfor %}
+      {% for s in site.social %}{% if s.onContactPage !== false %}<a href="{{ s.url }}">{{ s.name }}</a>{% endif %}{% endfor %}
     </div>
   </div>
 </section>

@@ -21,7 +21,8 @@
     },
     {
       "name": "Facebook",
-      "url": "https://www.facebook.com/pericles.loucopoulos.9"
+      "url": "https://www.facebook.com/pericles.loucopoulos.9",
+      "onContactPage": false
     }
   ],
   "portrait": "/images/portrait.jpg"
